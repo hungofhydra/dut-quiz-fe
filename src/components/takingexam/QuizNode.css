@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.quizNode {
+  width: 50px;
+  height: 50px;
+  background-color: var(--mainBGColor);
+  border: 1px solid var(--darkestColor);
+  font-size: 80%;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.quizNode:hover {
+  border: 3px solid var(--darkestColor);
+}
+.quizNode.Multiple {
+  border-radius: 5px;
+}
+.quizNode.Single {
+  border-radius: 25px;
+}
+.indexNode {
+  flex: 1;
+  margin-top: 10%;
+  font-family: sans-serif;
+  color: var(--darkestColor);
+  font-size: 170%;
+  font-weight: normal;
+}
+
+.quizNode.done {
+  background-color: var(--darkestColor);
+}
+.quizNode.done .indexNode {
+  font-weight: bold;
+  color: var(--mainBGColor);
+}

@@ -1,0 +1,80 @@
+@import url("../../index.css");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.exambox {
+  background-color: rgba(256, 256, 256, 0.42);
+  width: 100%;
+  height: 80px;
+  border-radius: 15px;
+  position: relative;
+  color: var(--darkestColor);
+  box-shadow: 0px 2px 2px #70707063;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.exambox:hover {
+  background-color: var(--darkBGColor);
+  height: 100px;
+  transition: 0.3s;
+}
+
+.exambox .up .right #time,
+#length {
+  transition: 0.3s;
+}
+.exambox:hover .up .right #length {
+  margin-right: -45px;
+  transition: 0.3s;
+}
+.exambox:hover .up .right #time {
+  margin-top: 60px;
+  transition: 0.3s;
+}
+
+.up {
+  font-family: "SF-Pro-Display-Medium";
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.up .left {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.up .right {
+  margin-right: 20px;
+  margin-top: 10px;
+  display: flex;
+}
+.up .right #length {
+  margin-right: 10px;
+}
+.exambox .title {
+  position: absolute;
+  font-family: "SF-Pro-Display-Bold";
+  font-size: 20px;
+  top: 40px;
+  left: 20px;
+}
+.down {
+  transition: 0.3s;
+  opacity: 0;
+  font-family: "SF-Pro-Display-Medium";
+  font-size: 15px;
+}
+.down #date {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+}
+.exambox:hover .down {
+  opacity: 1;
+}

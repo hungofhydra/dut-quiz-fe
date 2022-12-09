@@ -1,0 +1,219 @@
+@import url("../index.css");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.takingExam {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.takingExam .contain {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.takingExam .contain .title {
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--darkestColor);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.takingExam .contain .nottitle {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.nottitle .testContain {
+  width: 60%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.testContain .infor {
+  width: 90%;
+  height: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.testContain .infor #timer {
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: var(--warningHighlight);
+}
+
+.testContain .infor #time {
+  margin-right: 20px;
+}
+
+.nottitle .testManaging {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.nottitle .testManaging .questionNodes {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 50%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  overflow: auto;
+  gap: 10px;
+  border: 2px solid var(--darkestColor);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.nottitle .testManaging .questionNodes::-webkit-scrollbar {
+  width: 0;
+}
+
+.nottitle .testManaging .warning {
+  position: absolute;
+  top: 55%;
+  height: 350px;
+  width: 100%;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--darkestColor);
+  font-size: 20px;
+  margin-top: 50px;
+}
+.nottitle .testManaging .warning #faultCount {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.nottitle .testManaging .warning #warningMessage {
+  margin-left: 20px;
+  margin-right: 30px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--lightWarningBGColor);
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.testContain .submitBtn {
+  width: 80%;
+  text-align: center;
+}
+
+.testContain .testField {
+  height: 90%;
+  width: fit-content;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  overflow: auto;
+  border: 2px solid var(--badHighlight);
+  border-radius: 20px;
+}
+.testContain .testField::-webkit-scrollbar {
+  width: 0;
+}
+
+Header {
+  position: fix;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+  background: var(--warningHighlight);
+  position: fixed;
+  z-index: 99;
+}
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+#top {
+  top: 0;
+}
+#bottom {
+  bottom: 0;
+}
+#confirm,
+#warn,
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #31587058;
+  transition: 0.25;
+  align-items: center;
+}
+#confirm .confirmMessage,
+#warn .confirmMessage {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+  padding: 70px;
+  font-size: 25px;
+  font-family: sans-serif;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px #707070c2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #344756;
+}
+
+#confirm .confirmMessage .confirmBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+#loading #loadingIcon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  background-size: cover;
+}

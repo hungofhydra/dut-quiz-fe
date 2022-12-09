@@ -1,0 +1,63 @@
+@import url("../../index.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.resultAnounce {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-image: url(../../../public/background.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultAnounce .resultContain {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.resultAnounce .resultContain h2 {
+  color: var(--darkestColor);
+  font-size: 25px;
+  width: 100%;
+}
+
+.resultAnounce .resultContain .text {
+  font-size: 20px;
+  color: var(--darkestColor);
+}
+
+.resultAnounce .resultContain ._score,
+._score.good,
+._score.bad {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.resultAnounce .resultContain ._score {
+  color: var(--warningBGColor);
+}
+.resultAnounce .resultContain ._score.good {
+  color: var(--wellHighlight);
+}
+.resultAnounce .resultContain ._score.bad {
+  color: var(--warningHighlight);
+}
+
+.resultAnounce .resultContain .timeDone {
+  font-size: 30px;
+  color: var(--badHighlight);
+  font-weight: bolder;
+}

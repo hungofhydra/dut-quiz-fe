@@ -1,0 +1,188 @@
+@import "../../index.css";
+@font-face {
+  font-family: "SF-Pro-Display-Bold";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Medium";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Medium.otf");
+}
+@font-face {
+  font-family: "SF-Pro-Display-Regular";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf");
+}
+@font-face {
+  font-family: "SF-Pro-Display-Light-Italic";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-LightItalic.otf");
+}
+@font-face {
+  font-family: "SF-Pro-Display-Regular-Italic";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-RegularItalic.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.login_page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 10vh;
+  align-items: center;
+}
+.login_title {
+  color: var(--darkestColor);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.login_title #namepage {
+  font-family: SF-Pro-Display-Bold;
+  font-size: 40px;
+  flex: 1;
+  margin-bottom: 10px;
+}
+.login_title #author {
+  font-family: SF-Pro-Display-Medium;
+  font-size: 30px;
+  flex: 1;
+}
+
+.login_part {
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+}
+.login_part #logo {
+  background-image: url(/public/LOGOCNTT.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  border-radius: 15%;
+}
+.login_part #login,
+#signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+._input {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text_input {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.text_input .input_field {
+  width: 400px;
+  height: 60px;
+  color: var(--darkestColor);
+  border: 1px solid #eee;
+  padding: 0 20px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  box-shadow: 0px 5px 5px 2px #4c4c4c20;
+  font-family: SF-Pro-Display-Regular;
+  font-size: 25px;
+}
+
+.text_input .input_lable {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  color: #2e485859;
+  user-select: none;
+  transition: 0.25s ease;
+}
+
+.text_input .input_field:not(:placeholder-shown) + .input_lable,
+.text_input .input_field:focus + .input_lable {
+  top: 0;
+  display: inline-block;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(234, 254, 253) 100%
+  );
+  color: var(--darkestColor);
+  font-size: 15px;
+}
+
+.text_input.Error .input_field {
+  border: 2px solid var(--warningHighlight);
+}
+.text_input.Success .input_field {
+  border: 2px solid var(--wellHighlight);
+}
+
+#passforget {
+  cursor: pointer;
+  font-family: SF-Pro-Display-Light-Italic;
+  text-decoration: none;
+  color: var(--darkestColor);
+  margin-bottom: 30px;
+}
+.errorMessage {
+  cursor: pointer;
+  font-family: SF-Pro-Display-Bold;
+  text-decoration: none;
+  margin-bottom: 30px;
+  color: var(--warningHighlight);
+}
+#passforget:hover {
+  text-decoration: underline;
+  font-family: SF-Pro-Display-Regular-Italic;
+}
+.Loginbutton {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+#loadingLogin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blurBGColor);
+  transition: 0.25;
+  align-items: center;
+}
+#loadingLogin #loadingIconLogin {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 45vw;
+  background-size: cover;
+}
+.successAnnouce {
+  font-family: SF-Pro-Display-Bold;
+  text-decoration: none;
+  color: var(--wellHighlight);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 20px;
+}

@@ -1,0 +1,135 @@
+@import url("../../index.css");
+@font-face {
+  font-family: "SF-Pro-Display-Bold";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Medium";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Medium.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Regular";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Light";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Light.otf");
+}
+
+.profile {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 350px;
+  margin-right: 5vw;
+}
+.profile .num1 {
+  display: flex;
+  justify-content: space-between;
+}
+.infor {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: right;
+}
+#name {
+  position: abolute;
+  font-family: SF-Pro-Display-Bold;
+  font-size: 20px;
+  margin-top: 30%;
+}
+
+#studentid {
+  font-family: SF-Pro-Display-Light;
+  font-size: 15px;
+  cursor: pointer;
+}
+#studentid:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.image {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+.avatar:hover .image {
+  width: 100%;
+  height: 100%;
+  transition: 0.25s;
+}
+.profile .Menu {
+  visibility: hidden;
+  margin-top: -10px;
+  transition: 0.25s;
+  opacity: 0;
+}
+.profile.active .Menu {
+  visibility: visible;
+  margin-top: 10px;
+  transition: 0.25s;
+  opacity: 1;
+}
+Menu .MenuProfile {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+}
+.menuItems {
+  display: flex;
+  background-color: var(--mainBGColor);
+  border-radius: 50px;
+
+  width: 210px;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.menuItems:hover {
+  background-color: var(--darkBGColor);
+  transition: 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 2px #2e485850;
+}
+.menuItems .icon {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.menuItems .title {
+  font-family: SF-Pro-Display-Regular;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+a {
+  color: var(--darkestColor);
+  text-decoration: none;
+}

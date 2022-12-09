@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "SF-Pro-Display-Bold";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display-Medium";
+  font-style: normal;
+  font-weight: 0;
+  src: url("/public/fonts/SF-Pro-Display/SF-Pro-Display-Medium.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.examList {
+  width: 100%;
+  height: 100%;
+}
+
+Header {
+  position: fix;
+}
+.examList .contain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 150px;
+  align-items: center;
+  gap: 30px;
+}
+.examList .contain .recommend,
+.all {
+  width: 60%;
+  margin: 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.examList .contain .recommend {
+  height: 200px;
+  padding: 10px;
+}
+.examList .contain .all {
+  height: 100%;
+}
+.recommendExams,
+.allExams {
+  height: 90%;
+  width: 100%;
+  margin-top: 10px;
+}
+.allExams {
+  overflow: auto;
+}
+.allExams::-webkit-scrollbar {
+  width: 0;
+}
+Exams {
+  width: 100%;
+}
